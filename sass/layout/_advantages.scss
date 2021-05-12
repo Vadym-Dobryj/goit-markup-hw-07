@@ -1,0 +1,42 @@
+/* Секции */
+/* Преимущества */
+.advantages-icon__item {
+  margin-top: -30px;
+  flex-basis: calc((100% - 120px) / 4);
+  border: 1px solid transparent;
+  width: 100%;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.advantages__item {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - 120px) / 4);
+}
+.advantages__label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: var(--secondary-text-color);
+}
+
+.adventages__description {
+  font-size: 14px;
+  line-height: 1.7;
+}
