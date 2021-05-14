@@ -19,6 +19,7 @@
   line-height: 1.7;
   letter-spacing: 0.03em;
   font-style: normal;
+  margin-bottom: 60px;
 }
 .logo__studio {
   color: var(--primery-white-color);
@@ -32,6 +33,7 @@
 }
 .footer__contact {
   color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 60px;
 }
 .footer__label {
   color: #ffffff;
@@ -44,6 +46,9 @@
 .footer-social__list {
   color: var(--primery-white-color);
   display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 60px;
 }
 .footer-social__item:not(:last-child) {
   margin-right: 10px;
@@ -70,28 +75,51 @@
 }
 .footer__list {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  @media screen and(min-width:768px) {
+    justify-content: space-between;
+  }
+  @media screen and(min-width:1200px) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+  }
 }
 .footer__item {
   flex-basis: calc((100% - 30px) / 2);
 }
 
 .footer__left {
-  display: flex;
   flex-basis: calc((100% - 30px) / 2);
   justify-content: space-between;
+  @media screen and(min-width:768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @media screen and(min-width:1200px) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 /* Форма для футера */
 .right-footer {
-  flex-basis: calc((100% - 30px) / 2);
+  @media screen and(min-width:1200px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
 }
 .form-footer {
   display: inline;
 }
 .footer-email-input {
   position: relative;
-  display: flex;
+
+  @media screen and(min-width:1200px) {
+    display: flex;
+  }
 }
 .footer-input__text {
   margin-bottom: 20px;
@@ -103,7 +131,7 @@
 }
 .form-input {
   padding-left: 16px;
-  width: 358px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -111,6 +139,14 @@
   border-radius: 4px;
   background: #2f303a;
   color: #ffffff;
+
+  margin-bottom: 20px;
+  @media screen and(min-width:768px) {
+    width: 450px;
+  }
+  @media screen and(min-width:1200px) {
+    width: 358px;
+  }
 
   &::placeholder {
     font-size: 16px;
@@ -145,11 +181,17 @@
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 62px;
-  margin-left: 12px;
+  margin-left: auto;
+  margin-right: auto;
   cursor: pointer;
+
+  @media screen and(min-width:1200px) {
+    margin-left: 12px;
+  }
 }
 .form-icon-btn {
   position: relative;
+  text-align: center;
 }
 .footer-icon-btn {
   position: absolute;

@@ -36,7 +36,7 @@ body {
 }
 
 .conteiner {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -47,9 +47,34 @@ body {
   align-items: center;
 }
 
+@media screen and (min-width: 480px) {
+  .conteiner {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .conteiner {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .conteiner {
+    max-width: 1200px;
+  }
+}
+
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .visually-hidden {
@@ -178,29 +203,74 @@ body {
 
 /* Герой */
 .hero-section {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background: #2f303a;
   text-align: center;
   max-width: 1600px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/heroFon.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero-theme/hero-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+@media (min-device-pixel-ratio: 2) and (min-width: 480px), (min-resolution: 192dpi) and (min-width: 480px), (min-resolution: 2dppx) and (min-width: 480px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero-theme/hero-mobile@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero-theme/hero-tablet.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero-theme/hero-tablet@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero-theme/herotheme.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero-theme/herotheme@2x.jpg");
+  }
+}
+
 .hero-section__title {
-  max-width: 696px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   color: var(--primery-white-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 480px) {
+  .hero-section__title {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-section__title {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.4;
+  }
 }
 
 .button__primary {
@@ -238,17 +308,46 @@ body {
 }
 
 .advantages__list {
-  display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
   justify-content: center;
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+
 .advantages__item {
-  margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc((100% - 120px) / 4);
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__item {
+    margin-left: 30px;
+    flex-basis: calc((100% - 60px) / 2);
+    height: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages__item {
+    flex-basis: calc((100% - 120px) / 4);
+    margin-left: 30px;
+    height: 270px;
+  }
 }
 
 .advantages__label {
@@ -260,6 +359,13 @@ body {
   margin-top: 30px;
   margin-bottom: 10px;
   color: var(--secondary-text-color);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__label {
+    text-align: left;
+  }
 }
 
 .adventages__description {
@@ -268,6 +374,16 @@ body {
 }
 
 /* Чем занимаемся */
+.make {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .make {
+    display: block;
+  }
+}
+
 .section-title {
   color: var(--secondary-text-color);
   font-weight: 700;
@@ -311,20 +427,8 @@ body {
 /* Команда */
 .team-section {
   background: #f5f4fa;
-  width: 100%;
-}
-
-.team__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -50px;
-}
-
-.team__item {
-  flex-basis: calc((100% - 120px) / 4);
-  margin-left: 30px;
-  margin-top: 50px;
+  max-width: 450px;
+  margin: auto;
 }
 
 .player-team {
@@ -341,6 +445,7 @@ body {
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .player__position {
@@ -397,10 +502,22 @@ body {
 .client__item {
   margin-top: 30px;
   margin-left: 30px;
-  flex-basis: calc((100% - 180px) / 6);
+  flex-basis: calc((100% - 60px) / 2);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .client__item {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client__item {
+    flex-basis: calc((100% - 180px) / 6);
+  }
 }
 
 .client__link {
@@ -451,6 +568,7 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
   font-style: normal;
+  margin-bottom: 60px;
 }
 
 .logo__studio {
@@ -468,6 +586,7 @@ body {
 
 .footer__contact {
   color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 60px;
 }
 
 .footer__label {
@@ -482,6 +601,9 @@ body {
 .footer-social__list {
   color: var(--primery-white-color);
   display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 60px;
 }
 
 .footer-social__item:not(:last-child) {
@@ -510,7 +632,23 @@ body {
 
 .footer__list {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__list {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__list {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+  }
 }
 
 .footer__item {
@@ -518,14 +656,30 @@ body {
 }
 
 .footer__left {
-  display: flex;
   flex-basis: calc((100% - 30px) / 2);
   justify-content: space-between;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__left {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__left {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 /* Форма для футера */
-.right-footer {
-  flex-basis: calc((100% - 30px) / 2);
+@media screen and (min-width: 1200px) {
+  .right-footer {
+    flex-basis: calc((100% - 30px) / 2);
+  }
 }
 
 .form-footer {
@@ -534,7 +688,12 @@ body {
 
 .footer-email-input {
   position: relative;
-  display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-email-input {
+    display: flex;
+  }
 }
 
 .footer-input__text {
@@ -548,7 +707,7 @@ body {
 
 .form-input {
   padding-left: 16px;
-  width: 358px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -556,6 +715,19 @@ body {
   border-radius: 4px;
   background: #2f303a;
   color: #ffffff;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .form-input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form-input {
+    width: 358px;
+  }
 }
 
 .form-input::placeholder {
@@ -587,12 +759,20 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 62px;
-  margin-left: 12px;
+  margin-left: auto;
+  margin-right: auto;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__button {
+    margin-left: 12px;
+  }
 }
 
 .form-icon-btn {
   position: relative;
+  text-align: center;
 }
 
 .footer-icon-btn {

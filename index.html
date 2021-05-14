@@ -15,20 +15,20 @@
 </head>
 
 <body>
-    <header class="header page-header">
-          <!-- Шапка -->
+    <!-- Шапка -->
+    <!-- <header class="header page-header">
         <div class="conteiner">
-         <nav class="naw site-nav">
+         <nav class="naw site-nav"> -->
              <!-- Навыгация в шапке -->
-             <a href="./index.html" class="header-logo site-nav__link"><span class="logo__web">Web</span>Studio</a>
+             <!-- <a href="./index.html" class="header-logo site-nav__link"><span class="logo__web">Web</span>Studio</a>
              <ul class="site-nav__list">
                  <li class="site-nav__item"><a href="./index.html" class="site-nav__link current">Студия</a></li>
                  <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
                  <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
              </ul>
-         </nav>
+         </nav> -->
          <!-- Контакты -->
-         <ul class="contact-list">
+         <!-- <ul class="contact-list">
              <li>
                 <a href="mailto:info@devstudio.com" class="contact"> <svg class="contact__icon" width="16" height="13">
                     <use href="./image/sprite.svg#icon-envelope"></use>
@@ -43,7 +43,7 @@
              </li>
          </ul>
         </div>
-    </header>
+    </header> -->
     <main>
         <div class="conteiner">
             <!-- Герой -->
@@ -105,15 +105,32 @@
                 <h2 class="section-title">Чем мы занимаемся</h2>
                 <ul class="working working-list">
                     <li class="working-list__img">
-                        <img src="./image/box1.jpg" width="370" alt="Человек роботает за компьютером">
+                        <picture>
+                            <source srcset="./image/our-work/our-work1.webp 1x, ./image//image/our-work/our-work1.webp 2x" media="(min-width: 1200px)"
+                                type="image/webp">
+                            <source srcset="./image/our-work/our-work1.jpg 1x, ./image//image/our-work/our-work1@2x.jpg 2x" media="(min-width: 1200px)">
+                            <img src="./image/our-work/our-work1.jpg" alt="Человек роботает за компьютером">
+                        </picture>
                         <p class="working-list__discription">Десктопные приложения</p>
                     </li>
                     <li class="working-list__img">
-                        <img src="./image/box2.jpg" width="370" alt="Человек с мобильным роботает за компьютером">
+                        <picture>
+                            <source srcset="./image/our-work/our-work2.webp 1x, ./image//image/our-work/our-work2.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./image/our-work/our-work2.jpg 1x, ./image//image/our-work/our-work2@2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <img src="./image/our-work/our-work2.jpg" alt="Человек с мобильным роботает за компьютером">
+                        </picture>
                         <p class="working-list__discription">Мобильные приложения</p>
                     </li>
                     <li class="working-list__img">
-                        <img src="./image/box3.jpg" width="370" alt="Человек роботает на планшете">
+                        <picture>
+                            <source srcset="./image/our-work/our-work3.webp 1x, ./image//image/our-work/our-work3.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./image/our-work/our-work3.jpg 1x, ./image//image/our-work/our-work3@2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <img src="./image/our-work/our-work3.jpg" alt="Человек роботает на планшете">
+                        </picture>
                         <p class="working-list__discription">Дизайнерские решения</p>
                     </li>
                 </ul>
@@ -124,9 +141,23 @@
         <section class="team-section section">
             <div class="conteiner">
                  <h2 class="section-title">Наша команда</h2>
-                 <ul class="team team__list">
-                     <li class="team__item">
-                       <img src="./image/photo1.jpg" width="270" alt="Игорь Демьяненко">
+                <ul class="team team__list">
+                    <li class="team__item">
+                        <picture>
+                            <source srcset="./image/team/team1.webp 1x, ./image/team/team1@2x.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./image/team/team1.jpg 1x, ./image/team/team1@2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./image/team/tabletTeam1.webp 1x, ./image/team/tabletTeam1@2x.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./image/team/tabletTeam1.jpg 1x, ./image/team/tabletTeam1@2x.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./image/team/mobTeam1.webp 1x, ./image/team/mobTeam1@2x.webp 2x" 
+                                media="(min-width: 480px)"type="image/webp">
+                            <source srcset="./image/team/mobTeam1.jpg 1x, ./image/team/mobTeam1@2x.jpg 2x" 
+                                media="(min-width: 480px)">
+                            <img src="./image/team/mobTeam1.jpg" alt="Игорь Демьяненко">
+                        </picture>
                         <div class="player-team">
                             <h3 class="player__name">Игорь Демьяненко</h3>
                             <p class="player__position">Product Designer</p>
@@ -163,7 +194,18 @@
                         </div>
                      </li>
                      <li class="team__item">
-                         <img src="./image/photo2.jpg" width="270" alt="Ольга Репина">
+                        <picture>
+                            <source srcset="./image/team/team2.webp 1x, ./image/team/team2@2x.webp 2x" media="(min-width: 1200px)"
+                                type="image/webp">
+                            <source srcset="./image/team/team2.jpg 1x, ./image/team/team2@2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./image/team/tabletTeam2.webp 1x, ./image/team/tabletTeam2@2x.webp 2x" media="(min-width: 768px)"
+                                type="image/webp">
+                            <source srcset="./image/team/tabletTeam2.jpg 1x, ./image/team/tabletTeam2@2x.jpg 2x" media="(min-width: 768px)">
+                            <source srcset="./image/team/mobTeam2.webp 1x, ./image/team/mobTeam2@2x.webp 2x" media="(min-width: 480px)"
+                                type="image/webp">
+                            <source srcset="./images/team/mobTeam2.jpg 1x, ./image/team/mobTeam2@2x.jpg 2x" media="(min-width: 480px)">
+                            <img src="./image/team/mobTeam2.jpg" alt="Ольга Репина">
+                        </picture>
                         <div class="player-team">
                             <h3 class="player__name">Ольга Репина</h3>
                             <p class="player__position">Frontend Developer</p>
@@ -200,7 +242,18 @@
                         </div>
                      </li>
                      <li class="team__item">
-                         <img src="./image/photo3.jpg" width="270" alt="Николай Тарасов">
+                        <picture>
+                            <source srcset="./image/team/team3.webp 1x, ./image/team/team3@2x.webp 2x" media="(min-width: 1200px)"
+                                type="image/webp">
+                            <source srcset="./image/team/team3.jpg 1x, ./image/team/team3@2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./image/team/tabletTeam3.webp 1x, ./image/team/tabletTeam3@2x.webp 2x" media="(min-width: 768px)"
+                                type="image/webp">
+                            <source srcset="./image/team/tabletTeam3.jpg 1x, ./image/team/tabletTeam3@2x.jpg 2x" media="(min-width: 768px)">
+                            <source srcset="./image/team/mobTeam3.webp 1x, ./image/team/mobTeam3@2x.webp 2x" media="(min-width: 480px)"
+                                type="image/webp">
+                            <source srcset="./image/team/mobTeam3.jpg 1x, ./image/team/mobTeam3@2x.jpg 2x" media="(min-width: 480px)">
+                            <img src="./image/team/mobTeam3.jpg" alt="Николай Тарасов">
+                        </picture>
                          <div class="player-team">
                             <h3 class="player__name">Николай Тарасов</h3>
                             <p class="player__position">Marketing</p>
@@ -237,7 +290,18 @@
                          </div>
                      </li>
                      <li class="team__item">
-                             <img src="./image/photo4.jpg" width="270" alt="Михаил Ермаков">
+                            <picture>
+                                <source srcset="./image/team/team4.webp 1x, ./image/team/team4@2x.webp 2x" media="(min-width: 1200px)"
+                                    type="image/webp">
+                                <source srcset="./image/team/team4.jpg 1x, ./image/team/team4@2x.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./image/team/tabletTeam4.webp 1x, ./image/team/tabletTeam4@2x.webp 2x" media="(min-width: 768px)"
+                                    type="image/webp">
+                                <source srcset="./image/team/tabletTeam4.jpg 1x, ./image/team/tabletTeam4@2x.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./image/team/mobTeam4.webp 1x, ./image/team/mobTeam4@2x.webp 2x" media="(min-width: 480px)"
+                                    type="image/webp">
+                                <source srcset="./image/team/mobTeam4.jpg 1x, ./image/team/mobTeam4@2x.jpg 2x" media="(min-width: 480px)">
+                                <img src="./image/team/mobTeam4.jpg" alt="Михаил Ермаков">
+                            </picture>
                          <div class="player-team">
                             <h3 class="player__name">Михаил Ермаков</h3>
                             <p class="player__position">UI Designer</p>
