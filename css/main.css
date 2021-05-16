@@ -431,11 +431,16 @@ body {
   margin: auto;
 }
 
+.team__list {
+  max-width: 100%;
+}
+
 .player-team {
   margin-top: 0;
   padding: 30px;
   border: 1px solid #ececec;
   background-color: #ffffff;
+  max-width: 100%;
 }
 
 .player__name {
@@ -966,12 +971,23 @@ body {
 /* Портфолио css */
 /* Кнопки фильтра */
 .button__list {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .button__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
 .button__filtr {
+  margin-bottom: 15px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -997,17 +1013,31 @@ body {
 }
 
 .portfolio__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  display: block;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -28px;
+    margin-top: -30px;
+  }
 }
 
 .portfolio__item {
-  flex-basis: calc((100% - 90px) / 3);
-  margin-left: 28px;
   margin-top: 30px;
   border: solid 1px #eeeeee;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: 28px;
+    margin-top: 30px;
+    height: 440px;
+  }
 }
 
 .portfolio__item:hover {
@@ -1018,6 +1048,7 @@ body {
   border: 1px solid #eeeeee;
   height: 108px;
   padding: 20px 24px;
+  margin: auto;
 }
 
 .portfolio__label {
@@ -1033,6 +1064,7 @@ body {
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.03em;
+  max-width: 480px;
 }
 
 .thumb {
